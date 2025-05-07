@@ -25,3 +25,20 @@ export default defineConfig({
   rehypePlugins: [rehypeCodeTerminal, [rehypeStarryNight, { grammars: [...common, sourceZig, sourceScala, sourceJulia, sourceHaskell] }]],
 })
 ```
+
+* You'll also need to include the styles, and inject the components
+
+```tsx
+import '@bebeal/rehype-code-terminal/style.css'
+import { InlineTerminal, Terminal } from '@bebeal/rehype-code-terminal'
+
+<MDXProvider components={{ InlineTerminal, Terminal }}>
+  ...
+</MDXProvider>
+```
+
+## Demo
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/33963cb2-3bc8-464c-985c-d744042c0828" alt="code language blocks" />
+</div>
