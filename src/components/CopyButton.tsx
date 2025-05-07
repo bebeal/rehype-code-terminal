@@ -1,6 +1,7 @@
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { CarbonIcons } from './CarbonIcons';
 import { Tooltip } from './Tooltip';
+import { useRippleEffect } from '@bebeal/ripple-effect';
 
 interface CopyButtonProps {
   value: string;
@@ -27,6 +28,7 @@ export const CopyButton = memo(({ value, tooltip = 'Copy', tooltipSuccess = 'Cop
   const [tooltipMessage, setTooltipMessage] = useState<string>(tooltip);
   const [hasCopied, setHasCopied] = useState<boolean>(false);
   const [animationKey, setAnimationKey] = useState<number>(0);
+  const { createRippleEffect } = useRippleEffect();
 
   useEffect(() => {
     let timeout: string | number | NodeJS.Timeout | undefined;
@@ -41,6 +43,7 @@ export const CopyButton = memo(({ value, tooltip = 'Copy', tooltipSuccess = 'Cop
 
   const onClick = useCallback(
     async (event: React.MouseEvent<HTMLButtonElement>) => {
+      createRippleEffect(event);
       event.preventDefault();
       event.stopPropagation();
       if (!navigator.clipboard) {
@@ -52,7 +55,7 @@ export const CopyButton = memo(({ value, tooltip = 'Copy', tooltipSuccess = 'Cop
       setTooltipMessage(tooltipSuccess);
       setAnimationKey((prev) => prev + 1);
     },
-    [tooltipSuccess, value],
+    [createRippleEffect, tooltipSuccess, value],
   );
 
   const CopyButton = useMemo(() => {

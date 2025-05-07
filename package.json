@@ -31,6 +31,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bebeal/ripple-effect": "^1.0.0",
     "@mdx-js/react": "^3.1.0",
     "@mdx-js/rollup": "^3.1.0",
     "@radix-ui/react-tooltip": "^1.2.4",

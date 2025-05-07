@@ -227,6 +227,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@bebeal/rehype-code-terminal@workspace:."
   dependencies:
+    "@bebeal/ripple-effect": "npm:^1.0.0"
     "@eslint/js": "npm:^9.22.0"
     "@mdx-js/react": "npm:^3.1.0"
     "@mdx-js/rollup": "npm:^3.1.0"
@@ -252,6 +253,13 @@ __metadata:
     vite-plugin-dts: "npm:^4.5.3"
   languageName: unknown
   linkType: soft
+
+"@bebeal/ripple-effect@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@bebeal/ripple-effect@npm:1.0.0"
+  checksum: 10c0/03580a63bf1df374b7f311f7b70f40c40303cd35b6fccb3af0bdead49de5486c7e94bc3dbff27c20e05d9dcab6af95cb7403b9e62ad6ff705d5f26ba37cd4cf2
+  languageName: node
+  linkType: hard
 
 "@esbuild/aix-ppc64@npm:0.25.3":
   version: 0.25.3

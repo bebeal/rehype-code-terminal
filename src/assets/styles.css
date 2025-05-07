@@ -148,6 +148,8 @@
   background-color: transparent;
   background-image: none;
   border: 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .copy-button {
