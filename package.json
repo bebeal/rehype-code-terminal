@@ -1,7 +1,7 @@
 {
   "name": "@bebeal/rehype-code-terminal",
   "description": "A rehype plugin for rendering code terminals in place of code blocks.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "publishConfig": {
     "access": "public"
   },
