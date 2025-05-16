@@ -26,7 +26,7 @@
     "emitDeclarationOnly": true,
     "outDir": "dist",
     "noEmit": false,
-    "types": ["react", "@types/node"]
+    "types": ["react", "@types/react", "@types/node", "@types/mdx"]
   },
   "include": ["src"]
 }
