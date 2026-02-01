@@ -1,4 +1,13 @@
-:root {
+.terminal-root,
+.terminal-root *,
+.terminal-root *::before,
+.terminal-root *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.terminal-root {
   --accent: rgb(0 140 255 / 1);
   --text-muted: rgb(85 85 85 / 1);
   --bg-terminal-header: rgb(40 40 43 / 1);
@@ -15,18 +24,7 @@
   --border-primary: rgb(73 85 95 / 1);
   --border-secondary: rgb(85 95 105 / 1);
   --border-tertiary: rgb(73 85 95 / 1);
-}
 
-.terminal-root,
-.terminal-root *,
-.terminal-root *::before,
-.terminal-root *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.terminal-root {
   display: flex;
   flex-direction: column;
   height: auto;
